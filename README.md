@@ -11,3 +11,4 @@ Chat `@BotFather` with `/newbot`
 - Chat your Telegram Bot
 - Copy your `Chat ID`
 
+![BOT Chat ID](https://raw.githubusercontent.com/zerobyte-id/2FA-SSH-Shell/master/Screenshot/BOT-API-GetUpdates.png)
