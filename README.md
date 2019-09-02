@@ -15,4 +15,5 @@ Chat `@BotFather` with `/newbot`
 - Change configuration `API KEY` & `Chat ID` on "shell2FA" source
 - Move `shell2FA` to `/bin/` (`mv shell2FA /bin/`)
 - `chmod +x /bin/shell2FA
-- Change shell in `/etc/passwd` => `/bin/bash` to `/bin/shell2FA`
+- Change shell in `/etc/passwd` => Example `/bin/bash` to `/bin/shell2FA`
+![/etc/passwd](https://raw.githubusercontent.com/zerobyte-id/2FA-SSH-Shell/master/Screenshot/etc-passwd.png)
