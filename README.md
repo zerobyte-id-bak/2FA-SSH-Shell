@@ -12,3 +12,6 @@ Chat `@BotFather` with `/newbot`
 - Copy your `Chat ID`
 
 ![BOT Chat ID](https://raw.githubusercontent.com/zerobyte-id/2FA-SSH-Shell/master/Screenshot/BOT-API-GetUpdates.png)
+
+- Download "shell2FA" source
+- Change configuration `API KEY` & `Chat ID` on "shell2FA" source
