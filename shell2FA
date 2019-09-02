@@ -1,5 +1,5 @@
 #!/bin/bash
-# 2FA SHELL LOGIN
+# 2FA SSH SHELL LOGIN
 
 #### CONFIGURATION ####
 RECALL_SHELL="/bin/bash"
@@ -14,10 +14,18 @@ echo " --------------------- "
 echo " | 2 F A - S h e l l | "
 echo " |     L o g i n     | "
 echo " --------------------- "
-echo " Login with $(whoami)@$(hostname) "
+echo " Login with $(whoami) [at] $(hostname) "
 echo ""
 
-KEYCODE=$(shuf -i 100000-999999 | head -1)
+function RandomKey() {
+	awk 'BEGIN {
+	   srand()
+	   for (i=1;i<=1;i++){
+	     print int(rand() * 1000000)
+	   }
+	}'
+}
+KEYCODE=$(RandomKey)
 
 if [[ ! -z $(curl -s "https://api.telegram.org/bot${APIKEY}/sendMessage?chat_id=${CHATID}&parse_mode=Markdown&text=2FA-SHELL+OTP%0A%0D%0A%0D%60HOSTNAME+:%60+*$(hostname)*%0A%0D%60USERNAME+:%60+*$(whoami)*%0A%0D%60OTP+KEY++:%60+*${KEYCODE}*" 2> /dev/null | grep '"ok":true') ]]; then
 	echo " INFO: OTP Sent!"
